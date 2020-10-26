@@ -1,0 +1,39 @@
+{
+  "name": "biketeams",
+  "version": "1.0.0",
+  "description": "Cyclists social network ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CapriLucas/bikeTeams.git"
+  },
+  "keywords": [
+    "socialNetwork",
+    "cyclists"
+  ],
+  "author": "Lucas Capriata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CapriLucas/bikeTeams/issues"
+  },
+  "homepage": "https://github.com/CapriLucas/bikeTeams#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
