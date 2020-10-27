@@ -33,7 +33,7 @@ router.post('/signin',(req,res,next)=>{
 
 router.get('/logout',(req,res)=>{
   req.logOut();
-  res.redirect('/signin');
+  res.redirect('/');
 });
 router.get('/profile',isLoggedIn,(req,res,next)=>{
   res.render('profile.hbs');
