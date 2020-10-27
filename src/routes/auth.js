@@ -5,11 +5,11 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const {isLoggedIn, isNotLoggedIn} = require('../lib/auth.js');
 
-router.get('/signup',(req,res)=>{
+router.get('/signup',isNotLoggedIn,(req,res)=>{
   res.render('auth/signup.hbs')
 })
 
-router.post('/signup',passport.authenticate(
+router.post('/signup',isNotLoggedIn,passport.authenticate(
   'local.signup',
   {
     successRedirect: '/',

@@ -1,0 +1,27 @@
+<div class="container p-4">
+  <div class="row">
+    {{#each bikes}}
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title text-uppercase">
+            {{name}}
+          </h3>
+          <p class="m-2">{{wheel_size}}</p>
+          <p> {{size}} </p>
+          <p> {{shifter}} </p>
+          <a href="/bike/delete/{{id}}" class="btn btn-danger">Delete Link </a>
+          <a href="/bike/edit/{{id}}" class="btn btn-secondary">Edit</a>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <div class="col-md-4 mx-auto">
+      <div class="card card-body text-center">
+        <p>There are not any bike saved yet</p>
+        <a href="/bike/add">Add One!!!</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
