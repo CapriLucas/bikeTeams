@@ -15,3 +15,9 @@ Eliminar bicicleta
 Editar bicicleta
 Ver bicicletas
 \*\*\* nota de color: Los usuarios usaran como log-in su gmail
+
+Cómo cosas para mejorar pero que son medio difícil son:
+. Poder agendar próximos recorridos
+. Poder chatear con gente
+. Usar google maps para ver el recorrido
+. Poder utilizar "ok google" con algunos comandos
