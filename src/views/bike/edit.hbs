@@ -1,0 +1,33 @@
+<div class="container">
+
+  <form action="/bike/edit/{{bike.id}}" method="POST">
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Bike's name</label>
+      <input value="{{bike.name}}" type="text" class="form-control" id="exampleFormControlInput1" placeholder=""
+        name="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Size</label>
+      <select class="form-control" name="size" id="exampleFormControlSelect1">
+        {{{size_correct}}}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Wheel size</label>
+      <select class="form-control" name="wheel_size" id="exampleFormControlSelect2">
+        {{{wheel_correct}}}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput2">Shifter description</label>
+      <input type="text" value="{{bike.shifter}}" class="form-control" id="exampleFormControlInput2" placeholder=""
+        name="shifter">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-block">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

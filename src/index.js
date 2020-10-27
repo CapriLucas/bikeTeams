@@ -7,7 +7,9 @@ const flash = require("connect-flash");
 // INICIALIZATION
 
 const app = express();
-
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session');
+const {database} = require('./keys.js')
 // SETTINGS
 
 app.set('port', 3000);
@@ -22,6 +24,12 @@ app.engine('.hbs',exphbs({
 app.set('view engines','.hbs');
 
 // MIDDLEWARES
+app.use(session({
+  secret: 'login',
+  resave: false,
+  saveUninitialized : false,
+  store : new MySQLStore(database),
+}));
 app.use(flash());
 app.use(express.json());
 app.use(morgan('dev'));
@@ -39,7 +47,7 @@ app.use((req,res,next)=>{
 // ROUTES
 
 app.use(require('./routes/index.js'));
-
+app.use('/bike',require('./routes/bike.js'));
 // PUBLIC
 
 app.use(express.static(path.join(__dirname,'public')));
