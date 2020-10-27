@@ -1,3 +1,6 @@
+const bcrypt = require('bcryptjs');
+const passport = require('passport');
+
 const selector = (values,correct)=>{
   let finalText ='';
   for (let value of values) {
@@ -13,11 +16,23 @@ const selector = (values,correct)=>{
   return finalText;
 };
 
-const hola = ()=>{
-  return `<h1> HOLA </h1>`;
-}
+const encryptPassword = async (password) =>{
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(password,salt);
+  return hash;
+};
+
+const matchPassword = async (password, savedPassword)=>{
+ try{
+   return await bcrypt.compare(password,savedPassword);
+ } catch(err){
+   console.log(err);
+
+ }
+};
 
 module.exports ={
   selector,
-  hola
+  encryptPassword,
+  matchPassword
 }
