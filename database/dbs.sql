@@ -38,8 +38,8 @@ DESCRIBE team;
 -- TOUR TABLE
 CREATE TABLE tour(
   id INT(10) NOT NULL,
-  rel_id INT(10) NOT NULL,
-  is_team BOOLEAN NOT NULL,
+  user_id INT(10) NOT NULL,
+  team_id INT(10) NOT NULL,
   distance DOUBLE(4,3) NOT NULL,
   duration INT(10),
   date DATE NOT NULL
@@ -52,8 +52,8 @@ ALTER TABLE tour
   MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
 
 ALTER TABLE tour
-  ADD CONSTRAINT fk_tour_user FOREIGN KEY (rel_id) REFERENCES team(id),
-  ADD CONSTRAINT fk_tour_team FOREIGN KEY (rel_id) REFERENCES user(id);
+  ADD CONSTRAINT fk_tour_user FOREIGN KEY (user_id) REFERENCES user(id),
+  ADD CONSTRAINT fk_tour_team FOREIGN KEY (team_id) REFERENCES team(id);
 
 
 DESCRIBE tour;
