@@ -1,0 +1,30 @@
+<div class="container">
+  {{#if team}}
+  <form action="/tour/team" method="POST">
+    {{else}}
+    <form action="/tour/alone" method="POST">
+      {{/if}}
+      {{!-- DATA NEEDED : description,is_team, distance,duration,date --}}
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Route description</label>
+        <textarea class="form-control" id="exampleFormControlInput1" autofocus rows="2" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput2">Distance (KM)</label>
+        <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="KM.xx" name="distance">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput4">Duration (Minutes)</label>
+        <input type="number" class="form-control" id="exampleFormControlInput4" placeholder="" name="duration">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput3">Tour date</label>
+        <input type="date" id="exampleFormControlInput3" class="form-control" name="date">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-block">
+          Save
+        </button>
+      </div>
+    </form>
+</div>

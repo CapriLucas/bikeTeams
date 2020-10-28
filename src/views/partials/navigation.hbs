@@ -11,6 +11,21 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/tour">Routes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              RUN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {{#if user.team_id}}
+              <a class="dropdown-item" href="/tour/team">With my team</a>
+              {{/if}}
+              <a class="dropdown-item" href="/tour/alone">Alone</a>
+            </div>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -19,7 +34,6 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {{#if user.team_id}}
               <a class="dropdown-item" href="/team/view">View</a>
-              <a class="dropdown-item" href="/">Run!!!</a>
               {{else}}
               <a class="dropdown-item" href="/team/create">Create Team</a>
               {{/if}}
@@ -39,7 +53,7 @@
             <a class="nav-link" href="/logout">LogOut</a>
           </li>
           <li class="nav-item nav-link">
-            Logged as {{user.username}}
+            {{user.username}}
           </li>
           {{else}}
           <li class="nav-item">

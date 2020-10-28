@@ -54,6 +54,7 @@ app.use(require('./routes/index.js'));
 app.use('/bike',require('./routes/bike.js'));
 app.use(require('./routes/auth.js'));
 app.use('/team',require('./routes/team.js'));
+app.use('/tour',require('./routes/tour.js'));
 // PUBLIC
 
 app.use(express.static(path.join(__dirname,'public')));
