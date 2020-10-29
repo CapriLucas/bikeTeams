@@ -3,7 +3,7 @@
 }
 
 .bg-image {
-	height: 100vh;
+	height: calc(100vh - 56px);
 	width: 100vw;
 	background: url(/img/bikes.jpg);
 	background-position: center center;
