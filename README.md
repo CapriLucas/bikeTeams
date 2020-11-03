@@ -21,3 +21,9 @@ Cómo cosas para mejorar pero que son medio difícil son:
 . Poder chatear con gente
 . Usar google maps para ver el recorrido
 . Poder utilizar "ok google" con algunos comandos
+
+Futuras lineas de trabajo:
+
+Convertir a bikeTeams en una verdadera red social. Poder intercambiar con distintos usuarios los logros y rutas completadas, lo mismo para los equipos.
+SI O SI se debe implementar algun sistema de mapas en los que uno pueda marcar la ruta, es indispensable este punto frente a la abstraccion de marcar po escrito una ruta.
+Creo que la popularidad de los asistentes virtuales (siri, google) propulsa mi idea de establecer ciertos comandos para cuando estas en medio de un recorrido.
